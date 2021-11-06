@@ -1,0 +1,22 @@
+{
+  "full_name": "Steve Marks",
+  "email": "totaldebug@example.com",
+  "github_username": "marksie1988",
+  "project_name": "Python Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+  "pypi_username": "{{ cookiecutter.github_username }}",
+  "version": "0.1.0",
+  "use_isort": "y",
+  "use_black": "y",
+  "use_flake8": "y",
+  "use_mypy": "y",
+  "use_pytest": "n",
+  "use_pypi_deployment_with_actions": "y",
+  "add_pyup_badge": "n",
+  "command_line_interface": ["Click", "Argparse", "No command-line interface"],
+  "create_author_file": "y",
+  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
+  "_all_python_minor_version": [7, 8, 9, 10],
+  "minimal_python_version": [3.7, 3.8, 3.9, 3.10]
+}
