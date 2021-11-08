@@ -128,6 +128,7 @@ warn_unused_configs = true
 warn_unused_ignores = true
 {% endif %}
 
+{% if cookiecutter.use_pytest == 'y' -%}
 [tool.pytest.ini_options]
 # https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
 # Directories that are not visited by pytest collector:
@@ -141,3 +142,4 @@ addopts = [
   "--doctest-modules",
   "--doctest-continue-on-failure",
 ]
+{% endif %}
