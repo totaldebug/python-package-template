@@ -20,7 +20,7 @@
        :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
 
     .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square&logoColor=white)](https://github.com/psf/black
-       :target:
+       :target: ttps://github.com/psf/black
 
     .. |Security: bandit| image:: https://img.shields.io/badge/security-bandit-green.svg?style=flat-square&logoColor=white
        :target: https://github.com/PyCQA/bandit
@@ -266,9 +266,9 @@ Or to remove pycache and build:
    </details>
 
 
-************
-📈 Releases
-************
+********
+Releases
+********
 
 You can see the list of available releases on the `GitHub Releases <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases>`_ page.
 
