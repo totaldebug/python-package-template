@@ -1,0 +1,16 @@
+FROM python:latest
+
+RUN apt update
+
+RUN apt upgrade  -y
+
+RUN apt install zsh python3-sphinx make -y
+
+RUN pip install --user poetry cookiecutter
+ENV PATH="${PATH}:/root/.local/bin"
+
+RUN wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O - | zsh || true
+RUN poetry completions zsh > ~/.zfunc/_poetry
+
+
+CMD ["zsh"]
