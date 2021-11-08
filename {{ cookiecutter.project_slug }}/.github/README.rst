@@ -11,7 +11,9 @@
 
 {{ cookiecutter.project_name }}
 
-|Python Version| |Dependencies Status| |black| |Security: bandit| |Pre-commit| |Semantic Versions| |License|
+|Python Version| |Dependencies Status|
+
+|black| |Security: bandit| |Pre-commit| |Semantic Versions| |License|
 
     .. |Python Version| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg?style=flat-square&logoColor=white
        :target: https://pypi.org/project/{{ cookiecutter.project_name }}/
@@ -37,16 +39,9 @@
 .. raw:: html
 
    </h1>
-
    <p align="center">
 
 `About`_ • `Install`_ • `Releases`_ • `Contribute`_ • `Support`_ • `Donate`_ • `Full Documentation <https://docs.totaldebug.uk/{{ cookiecutter.project_name }}>`_
-
-.. raw:: html
-
-   </p>
-
-   <p align="center">
 
 .. raw:: html
 
