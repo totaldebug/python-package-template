@@ -11,37 +11,25 @@
 
 {{ cookiecutter.project_name }}
 
-|Python Version|
+|Python Version| |Dependencies Status| |black| |Security: bandit| |Pre-commit| |Semantic Versions| |License|
 
     .. |Python Version| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg?style=flat-square&logoColor=white
        :target: https://pypi.org/project/{{ cookiecutter.project_name }}/
 
-|Dependencies Status|
-
     .. |Dependencies Status| image:: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square&logoColor=white
        :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
-
-|black|
 
     .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square&logoColor=white)](https://github.com/psf/black
        :target:
 
-|Security: bandit|
-
-    .. |black| image:: https://img.shields.io/badge/security-bandit-green.svg?style=flat-square&logoColor=white
+    .. |Security: bandit| image:: https://img.shields.io/badge/security-bandit-green.svg?style=flat-square&logoColor=white
        :target: https://github.com/PyCQA/bandit
-
-|Pre-commit|
 
     .. |Pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&style=flat-square&logoColor=white
        :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.pre-commit-config.yaml
 
-|Semantic Versions|
-
     .. |Semantic Versions| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg?style=flat-square
        :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases
-
-|License|
 
     .. |License| image:: https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}?style=flat-square&logoColor=white
        :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE
@@ -52,7 +40,7 @@
 
    <p align="center">
 
-`About`_ • `Install`_ • `Contribute`_ • `Author`_ • `Support`_ • `Donate`_ • `Full Documentation <https://docs.totaldebug.uk/{{ cookiecutter.project_name }}>`_
+`About`_ • `Install`_ • `Releases`_ • `Contribute`_ • `Support`_ • `Donate`_ • `Full Documentation <https://docs.totaldebug.uk/{{ cookiecutter.project_name }}>`_
 
 .. raw:: html
 
