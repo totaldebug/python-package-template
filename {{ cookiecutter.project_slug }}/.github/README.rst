@@ -95,9 +95,11 @@ Makefile usage
 
 [`Makefile`](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/Makefile) contains a lot of functions for faster development.
 
-<details>
-<summary>1. Download and remove Poetry</summary>
-<p>
+.. raw:: html
+
+   <details>
+   <summary>1. Download and remove Poetry</summary>
+   <p>
 
 To download and install Poetry run:
 
@@ -111,12 +113,13 @@ To uninstall
 
    make poetry-remove
 
-</p>
-</details>
+.. raw:: html
 
-<details>
-<summary>2. Install all dependencies and pre-commit hooks</summary>
-<p>
+   </p>
+   </details>
+   <details>
+   <summary>2. Install all dependencies and pre-commit hooks</summary>
+   <p>
 
 Install requirements:
 
@@ -130,12 +133,13 @@ Pre-commit hooks coulb be installed after `git init` via
 
    make pre-commit-install
 
-</p>
-</details>
+.. raw:: html
 
-<details>
-<summary>3. Codestyle</summary>
-<p>
+   </p>
+   </details>
+   <details>
+   <summary>3. Codestyle</summary>
+   <p>
 
 Automatic formatting uses ``pyupgrade``, ``isort`` and ``black``.
 
@@ -154,9 +158,11 @@ Codestyle checks only, without rewriting files:
 
 > Note: ``check-codestyle`` uses ``isort``, ``black`` and ``darglint`` library
 
-<details>
-<summary>4. Code security</summary>
-<p>
+.. raw:: html
+
+   <details>
+   <summary>4. Code security</summary>
+   <p>
 
 .. code:: bash
 
@@ -168,15 +174,15 @@ This command launches ``Poetry`` integrity checks as well as identifies security
 
    make check-safety
 
-</p>
-</details>
+.. raw:: html
 
-</p>
-</details>
-
-<details>
-<summary>5. Type checks</summary>
-<p>
+   </p>
+   </details>
+   </p>
+   </details>
+   <details>
+   <summary>5. Type checks</summary>
+   <p>
 
 Run `mypy` static type checker
 
@@ -184,12 +190,13 @@ Run `mypy` static type checker
 
    make mypy
 
-</p>
-</details>
+.. raw:: html
 
-<details>
-<summary>6. Tests</summary>
-<p>
+   </p>
+   </details>
+   <details>
+   <summary>6. Tests</summary>
+   <p>
 
 Run `pytest`
 
@@ -197,12 +204,13 @@ Run `pytest`
 
    make test
 
-</p>
-</details>
+.. raw:: html
 
-<details>
-<summary>7. All linters</summary>
-<p>
+   </p>
+   </details>
+   <details>
+   <summary>7. All linters</summary>
+   <p>
 
 Of course there is a command to ~~rule~~ run all linters in one:
 
@@ -216,12 +224,13 @@ the same as:
 
    make test && make check-codestyle && make mypy && make check-safety
 
-</p>
-</details>
+.. raw:: html
 
-<details>
-<summary>8. Cleanup</summary>
-<p>
+   </p>
+   </details>
+   <details>
+   <summary>8. Cleanup</summary>
+   <p>
 Delete pycache files
 
 .. code:: bash
@@ -240,8 +249,10 @@ Or to remove pycache and build:
 
    make clean-all
 
-</p>
-</details>
+.. raw:: html
+
+   </p>
+   </details>
 
 
 ************
@@ -258,15 +269,24 @@ You can categorize pull requests in release notes using labels.
 List of labels and corresponding titles
 =======================================
 
++----------------------------------------+--------------------------+
 |               **Label**               |  **Title in Releases**  |
++========================================+==========================+
 | :-----------------------------------: | :---------------------: |
 |       ``type/feature``        |       🚀 Exciting New Features       |
++----------------------------------------+--------------------------+
 | ``type/bug``, ``type/patch``  | 🐛 Patches & Bug Fixes  |
++----------------------------------------+--------------------------+
 |       ``type/ci``        | 📦 Build System & CI/CD |
++----------------------------------------+--------------------------+
 |      ``flag/breaking changes``      |   💥 Breaking Changes   |
++----------------------------------------+--------------------------+
 |            ``type/docs``            |    📚 Documentation     |
++----------------------------------------+--------------------------+
 |            ``type/language``            |    📔 Language     |
-|            ``type/dependencies``             | ⬆️ Dependencies updates |
++----------------------------------------+--------------------------+
+|            ``type/dependencies``       | ⬆️ Dependencies updates |
++----------------------------------------+--------------------------+
 
 You can update it in [`release.yml`](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.github/release.yml).
 
