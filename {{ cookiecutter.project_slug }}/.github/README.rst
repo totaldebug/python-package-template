@@ -11,17 +11,40 @@
 
 {{ cookiecutter.project_name }}
 
+|Python Version|
 
-[![Build status](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/workflows/release/badge.svg?branch=master&event=push&style=flat-square&logoColor=white)](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/actions?query=workflow%3Arelease)
-[![Python Version](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg?style=flat-square&logoColor=white)](https://pypi.org/project/{{ cookiecutter.project_name }}/)
-[![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square&logoColor=white)](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
+    .. |Python Version| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_name }}.svg?style=flat-square&logoColor=white
+       :target: https://pypi.org/project/{{ cookiecutter.project_name }}/
 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square&logoColor=white)](https://github.com/psf/black)
-[![Security: bandit](https://img.shields.io/badge/security-bandit-green.svg?style=flat-square&logoColor=white)](https://github.com/PyCQA/bandit)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&style=flat-square&logoColor=white)](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.pre-commit-config.yaml)
-[![Semantic Versions](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg?style=flat-square)](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases)
-[![License](https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}?style=flat-square&logoColor=white)](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
+|Dependencies Status|
 
+    .. |Dependencies Status| image:: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square&logoColor=white
+       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
+
+|black|
+
+    .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square&logoColor=white)](https://github.com/psf/black
+       :target:
+
+|Security: bandit|
+
+    .. |black| image:: https://img.shields.io/badge/security-bandit-green.svg?style=flat-square&logoColor=white
+       :target: https://github.com/PyCQA/bandit
+
+|Pre-commit|
+
+    .. |Pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&style=flat-square&logoColor=white
+       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.pre-commit-config.yaml
+
+|Semantic Versions|
+
+    .. |Semantic Versions| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg?style=flat-square
+       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases
+
+|License|
+
+    .. |License| image:: https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}?style=flat-square&logoColor=white
+       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE
 
 .. raw:: html
 
@@ -259,11 +282,11 @@ Or to remove pycache and build:
 📈 Releases
 ************
 
-You can see the list of available releases on the [GitHub Releases](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases) page.
+You can see the list of available releases on the `GitHub Releases <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases>`_ page.
 
 We follow [Semantic Versions](https://semver.org/) specification.
 
-We use [`action gh-release`](https://github.com/marketplace/actions/gh-release). As new version tags are created, release will be generated listing the changes.
+We use `action gh-release <https://github.com/marketplace/actions/gh-release>`_. As new version tags are created, release will be generated listing the changes.
 You can categorize pull requests in release notes using labels.
 
 List of labels and corresponding titles
@@ -288,7 +311,7 @@ List of labels and corresponding titles
 |            ``type/dependencies``       | ⬆️ Dependencies updates |
 +----------------------------------------+--------------------------+
 
-You can update it in [`release.yml`](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.github/release.yml).
+You can update it in `release.yml <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.github/release.yml>`_.
 
 **********
 Contribute
@@ -323,4 +346,4 @@ page <https://github.com/sponsors/{{ cookiecutter.github_sponsor }}>`__.
 
 [![License](https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }})](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
 
-This project is licensed under the terms of the `{{ cookiecutter.license }}` license. See [LICENSE](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE) for more details.
+This project is licensed under the terms of the `{{ cookiecutter.license }}` license. See `LICENSE <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE>`_ for more details.
