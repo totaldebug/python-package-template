@@ -38,7 +38,7 @@ Cookiecutter Python Package Template
    </h1>
    <p align="center">
 
-`About`_ • `Install`_ • `Releases`_ • `Contribute`_ • `Support`_ • `Donate`_
+`About`_ • `Usage`_ • `Releases`_ • `Support`_ • `Donate`_
 
 .. raw:: html
 
