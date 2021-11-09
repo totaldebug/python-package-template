@@ -75,9 +75,9 @@ jobs:
         id: cache
         with:
           path: ~/.virtualenvs
-          key: {% raw %}poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
+          key: poetry-{% raw %}${{ hashFiles('**/poetry.lock') }}{% endraw %}
           restore-keys: |
-            poetry-${{ hashFiles('**/poetry.lock') }}
+            poetry-{% raw %}${{ hashFiles('**/poetry.lock') }}{% endraw %}
       - name: Install Dependencies
         run: poetry install
         if: steps.cache.outputs.cache-hit != 'true'
