@@ -15,7 +15,7 @@ build-backend = "poetry.core.masonry.api"
 name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_description }}"
-readme = "README.md"
+readme = ".github/README.rst"
 authors = ["{{ cookiecutter.organization }} <{{ cookiecutter.email }}>"]
 license = "{{ cookiecutter.license }}"
 repository = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
@@ -49,15 +49,19 @@ rich = "^10.7.0"
 {% endif %}
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.0"
-black = {version = "^21.7b0", allow-prereleases = true}
+{% if cookiecutter.use_black == 'y' -%}
+black = {version = "^21.7b0", allow-prereleases = true}{% endif %}
 darglint = "^1.8.0"
-isort = {extras = ["colors"], version = "^5.9.3"}
+{% if cookiecutter.use_isort == 'y' -%}
+isort = {extras = ["colors"], version = "^5.9.3"}{% endif %}
+{% if cookiecutter.use_mypy == 'y' -%}
 mypy = "^0.910"
-mypy-extensions = "^0.4.3"
+mypy-extensions = "^0.4.3"{% endif %}
 pre-commit = "^2.14.0"
 pydocstyle = "^6.1.1"
 pylint = "^2.10.2"
-pytest = "^6.2.4"
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest = "^6.2.4"{% endif %}
 pyupgrade = "^2.24.0"
 safety = "^1.10.3"
 
