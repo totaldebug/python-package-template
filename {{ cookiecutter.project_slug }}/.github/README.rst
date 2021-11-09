@@ -19,7 +19,7 @@
        :target: https://pypi.org/project/{{ cookiecutter.project_name }}/
 
     .. |Dependencies Status| image:: https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?style=flat-square&logoColor=white
-       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
+       :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot
 
     .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square&logoColor=white)](https://github.com/psf/black
        :target: ttps://github.com/psf/black
@@ -28,13 +28,13 @@
        :target: https://github.com/PyCQA/bandit
 
     .. |Pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&style=flat-square&logoColor=white
-       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.pre-commit-config.yaml
+       :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/.pre-commit-config.yaml
 
     .. |Semantic Versions| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg?style=flat-square
-       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases
+       :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/releases
 
-    .. |License| image:: https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}?style=flat-square&logoColor=white
-       :target: https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE
+    .. |License| image:: https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}?style=flat-square&logoColor=white
+       :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE
 
 .. raw:: html
 
@@ -99,7 +99,7 @@ For more information read the full documentation on `installing the package`_
 Makefile usage
 ==============
 
-[`Makefile`](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/Makefile) contains a lot of functions for faster development.
+[`Makefile`](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/Makefile) contains a lot of functions for faster development.
 
 .. raw:: html
 
@@ -265,7 +265,7 @@ Or to remove pycache and build:
 Releases
 ********
 
-You can see the list of available releases on the `GitHub Releases <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/releases>`_ page.
+You can see the list of available releases on the `GitHub Releases <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/releases>`_ page.
 
 We follow [Semantic Versions](https://semver.org/) specification.
 
@@ -294,7 +294,7 @@ List of labels and corresponding titles
 |            ``type/dependencies``       | ⬆️ Dependencies updates |
 +----------------------------------------+--------------------------+
 
-You can update it in `release.yml <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/.github/release.yml>`_.
+You can update it in `release.yml <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/.github/release.yml>`_.
 
 **********
 Contribute
@@ -327,6 +327,6 @@ page <https://github.com/sponsors/{{ cookiecutter.github_sponsor }}>`__.
 🛡 License
 **********
 
-[![License](https://img.shields.io/github/license/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }})](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }})](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
 
-This project is licensed under the terms of the `{{ cookiecutter.license }}` license. See `LICENSE <https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/LICENSE>`_ for more details.
+This project is licensed under the terms of the `{{ cookiecutter.license }}` license. See `LICENSE <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE>`_ for more details.
