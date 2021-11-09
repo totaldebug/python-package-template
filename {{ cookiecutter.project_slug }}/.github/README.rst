@@ -329,4 +329,4 @@ page <https://github.com/sponsors/{{ cookiecutter.github_sponsor }}>`__.
 
 [![License](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }})](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
 
-This project is licensed under the terms of the `{{ cookiecutter.license }}` license. See `LICENSE <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE>`_ for more details.
+This project is licensed under the terms of the license. See `LICENSE <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE>`_ for more details.
