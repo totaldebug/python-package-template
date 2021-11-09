@@ -34,5 +34,6 @@
     3.9,
     3.10
   ],
-  "use_google_docstrings": "y"
+  "use_google_docstrings": "y",
+  "line-length": 88
 }
