@@ -25,9 +25,13 @@
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
-        "files.trimTrailingWhitespace": true,
-        "python.formatting.provider": "black",
-        "autoDocstring.docstringFormat": "google"
+        "files.trimTrailingWhitespace": true{% if cookiecutter.use_black == 'y' -%
+        },
+        "python.formatting.provider": "black"{% endif -%
+        }{% if cookiecutter.use_google_docstrings == 'y' -%
+        },
+        "autoDocstring.docstringFormat": "google"{% endif -%
+        }
     },
     "postCreateCommand": "make install && make pre-commit-install"
 }
