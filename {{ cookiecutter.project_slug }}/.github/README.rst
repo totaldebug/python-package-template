@@ -267,7 +267,7 @@ Releases
 
 You can see the list of available releases on the `GitHub Releases <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/releases>`_ page.
 
-We follow [Semantic Versions](https://semver.org/) specification.
+We follow `Semantic Versions <https://semver.org/>`_ specification.
 
 We use `action gh-release <https://github.com/marketplace/actions/gh-release>`_. As new version tags are created, release will be generated listing the changes.
 You can categorize pull requests in release notes using labels.

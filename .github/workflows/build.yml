@@ -1,0 +1,43 @@
+name: Build Example Repo
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # <minute [0,59]> <hour [0,23]> <day of the month [1,31]> <month of the year [1,12]> <day of the week [0,6]>
+    # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
+    # Run every Monday at 18:00:00 UTC (Monday at 10:00:00 PST)
+    - cron: '0 18 * * 1'
+
+jobs:
+  build-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2.3.1
+      with:
+        persist-credentials: false
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install Dependencies
+      run: |
+        pip install cookiecutter
+    - name: Generate Repo
+      run: |
+        cookiecutter . --no-input
+        rm -Rf python_boilerplate/.github/workflows/
+    - name: Install Generated Repo Dependencies
+      run: |
+        cd python_boilerplate
+        pip install -e .[all]
+    - name: Run Generated Repo Tests
+      run: |
+        pytest python_boilerplate
+    - name: Run Generated Repo Lint
+      run: |
+        cd python_boilerplate
+        flake8 python_boilerplate --count --verbose --show-source --statistics
+        black --check python_boilerplate
