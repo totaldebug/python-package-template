@@ -30,9 +30,6 @@ Cookiecutter Python Package Template
     .. |Semantic Versions| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versions-e10079.svg?style=flat-square
        :target: https://github.com/totaldebug/python-package-template/releases
 
-    .. |License| image:: https://img.shields.io/github/license/totaldebug/python-package-template?style=flat-square&logoColor=white
-       :target: https://github.com/totaldebug/python-package-template/blob/master/LICENSE
-
 .. raw:: html
 
    </h1>
@@ -148,11 +145,9 @@ page <https://github.com/sponsors/marksie1988>`__.
 🛡 License
 **********
 
-| License |
-
-    .. |License| image:: https://img.shields.io/github/license/totaldebug/python-package-template)](https://github.com/totaldebug/python-package-template/blob/master/LICENSE
-       :target: https://github.com/totaldebug/python-package-template/blob/master/LICENSE
-
-
+|License|
 
 This project is licensed under the terms of the license. See `LICENSE <https://github.com/totaldebug/python-package-template/blob/master/LICENSE>`_ for more details.
+
+    .. |License| image:: https://img.shields.io/github/license/totaldebug/python-package-template?style=flat-square
+       :target: https://github.com/totaldebug/python-package-template/blob/master/LICENSE
