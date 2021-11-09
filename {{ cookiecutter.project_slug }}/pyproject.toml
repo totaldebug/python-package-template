@@ -1,9 +1,9 @@
 {%- set license_classifiers = {
-    'MIT license': 'License :: OSI Approved :: MIT License',
-    'BSD license': 'License :: OSI Approved :: BSD License',
-    'ISC license': 'License :: OSI Approved :: ISC License (ISCL)',
-    'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
-    'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
+    'MIT': 'License :: OSI Approved :: MIT License',
+    'BSD-3-Clause': 'License :: OSI Approved :: BSD License',
+    'ISC': 'License :: OSI Approved :: ISC License (ISCL)',
+    'Apache-2.0': 'License :: OSI Approved :: Apache Software License',
+    'GPL-3.0-only': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
 } -%}
 {%- set python_version_splitted = cookiecutter.minimal_python_version.split('.') | map('int') | list -%}
 # Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
@@ -17,7 +17,9 @@ version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_description }}"
 readme = ".github/README.rst"
 authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
-license = "{{ cookiecutter.license }}"
+{%- if cookiecutter.open_source_license in license_classifiers %}
+license =  "{{ cookiecutter.open_source_license }}"
+{%- endif %}
 repository = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
 homepage = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
 
@@ -30,7 +32,9 @@ classifiers = [  #! Update me
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
   "Topic :: Software Development :: Libraries :: Python Modules",
-  "{{ license_classifiers[cookiecutter.license] }}",
+  {%- if cookiecutter.open_source_license in license_classifiers %}
+    '{{ license_classifiers[cookiecutter.open_source_license] }}',
+{%- endif %}
   "Programming Language :: Python :: 3",
   {%- for minor_version in cookiecutter._all_python_minor_version if minor_version >= python_version_splitted[1] %}
   "Programming Language :: Python :: 3.{{ minor_version }}",{% endfor %}
