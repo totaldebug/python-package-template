@@ -40,17 +40,9 @@ classifiers = [  #! Update me
   "Programming Language :: Python :: 3.{{ minor_version }}",{% endfor %}
 ]
 
-{% if cookiecutter.create_example_template == 'cli' -%}[tool.poetry.scripts]
-# Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
-"{{ cookiecutter.project_name }}" = "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}.__main__:app"{%- endif %}
-
 [tool.poetry.dependencies]
 python = "^{{ cookiecutter.minimal_python_version }}"
 {% if cookiecutter.minimal_python_version == '3.7' -%}importlib_metadata = {version = "^4.5.0", python = "<3.8"}{%- endif -%}
-{%+ if cookiecutter.create_example_template == 'cli' %}
-typer = {extras = ["all"], version = "^0.3.2"}
-rich = "^10.7.0"
-{% endif %}
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.0"
 {% if cookiecutter.use_black == 'y' -%}
