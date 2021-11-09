@@ -148,6 +148,11 @@ page <https://github.com/sponsors/marksie1988>`__.
 🛡 License
 **********
 
-[![License](https://img.shields.io/github/license/totaldebug/python-package-template)](https://github.com/totaldebug/python-package-template/blob/master/LICENSE)
+| License |
+
+    .. |License| image:: https://img.shields.io/github/license/totaldebug/python-package-template)](https://github.com/totaldebug/python-package-template/blob/master/LICENSE
+       :target: https://github.com/totaldebug/python-package-template/blob/master/LICENSE
+
+
 
 This project is licensed under the terms of the license. See `LICENSE <https://github.com/totaldebug/python-package-template/blob/master/LICENSE>`_ for more details.
