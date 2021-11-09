@@ -618,5 +618,6 @@ MigrationBackup/
 !.devcontainer/recommended-devcontainer.json
 !.devcontainer/recommended-Dockerfile
 .vscode/
+python_boilerplate/
 
 # End of https://www.gitignore.io/api/osx,python,pycharm,windows,visualstudio,visualstudiocode
