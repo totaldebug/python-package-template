@@ -1,4 +1,4 @@
-name: release
+{% raw %}name: release
 
 on:
   push:
@@ -60,7 +60,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
-          prerelease: ${{ contains(github.ref, '-rc') || contains(github.ref, '-b') || contains(github.ref, '-a') }}
+          {% raw %}prerelease: ${{ contains(github.ref, '-rc') || contains(github.ref, '-b') || contains(github.ref, '-a') }}{% endraw %}
 
       {% if cookiecutter.use_pypi_deployment_with_actions == 'y' -%}
       # PyPi release steps
@@ -75,7 +75,7 @@ jobs:
         id: cache
         with:
           path: ~/.virtualenvs
-          key: poetry-${{ hashFiles('**/poetry.lock') }}
+          {% raw %}key: poetry-${{ hashFiles('**/poetry.lock') }}{% endraw %}
           restore-keys: |
             poetry-${{ hashFiles('**/poetry.lock') }}
       - name: Install Dependencies
@@ -84,5 +84,5 @@ jobs:
       - name: Build
         run: poetry build
       - name: Publish distribution 📦 to PyPI
-        run: poetry publish -u __token__ -p ${{ secrets.pypi_password }}
+        {% raw %}run: poetry publish -u __token__ -p ${{ secrets.pypi_password }}{% endraw %}
       {% endif %}

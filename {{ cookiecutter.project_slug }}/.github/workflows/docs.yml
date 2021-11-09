@@ -1,6 +1,6 @@
 ---
 
-name: Documentation Update
+{% raw %}name: Documentation Update
 
 on:
   push:
@@ -19,4 +19,4 @@ jobs:
       - name: Update documentation
         uses: totaldebug/sphinx-publish-action@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          {% raw %}token: ${{ secrets.GITHUB_TOKEN }}{% endraw %}
