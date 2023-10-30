@@ -8,8 +8,8 @@
 {%- set python_version_splitted = cookiecutter.minimal_python_version.split('.') | map('int') | list -%}
 # Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
 [build-system]
-requires = ["poetry_core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.4.0"]
+build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
@@ -40,16 +40,16 @@ classifiers = [  #! Update me
   "Programming Language :: Python :: 3.{{ minor_version }}",{% endfor %}
 ]
 
-[tool.poetry.dependencies]
+[tool.poetry.group.dev.dependencies]
 python = "^{{ cookiecutter.minimal_python_version }}"
-{% if cookiecutter.minimal_python_version == '3.7' -%}importlib_metadata = {version = "^4.5.0", python = "<3.8"}{%- endif -%}
+
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.0"
-{% if cookiecutter.use_black == 'y' -%}
-black = {version = "^21.7b0", allow-prereleases = true}{% endif %}
+black = {version = "^22.12.0", allow-prereleases = true}
 darglint = "^1.8.0"
-{% if cookiecutter.use_isort == 'y' -%}
-isort = {extras = ["colors"], version = "^5.9.3"}{% endif %}
+flake8 = "^3.9.2"
+autoflake = "^1.7.8"
+isort = "^5.12.0"
 {% if cookiecutter.use_mypy == 'y' -%}
 mypy = "^0.910"
 mypy-extensions = "^0.4.3"{% endif %}
@@ -57,11 +57,16 @@ pre-commit = "^2.14.0"
 pydocstyle = "^6.1.1"
 pylint = "^2.10.2"
 {% if cookiecutter.use_pytest == 'y' -%}
-pytest = "^6.2.4"{% endif %}
+pytest = "^7.2.2"
+pytest-cov = "^3.0.0"{% endif %}
 pyupgrade = "^2.24.0"
 safety = "^1.10.3"
+Sphinx = "^4.5.0"
+sphinx-argparse = "^0.3.2"
+sphinx-autobuild = "^2021.3.14"
+sphinx-rtd-theme = "^1.2.0"
+nox = "^2022.11.21"
 
-{% if cookiecutter.use_black == 'y' -%}
 [tool.black]
 # https://github.com/psf/black
 target-version = ["py{{ cookiecutter.minimal_python_version.replace('.', '') }}"]
@@ -83,9 +88,7 @@ exclude = '''
     | venv
 )/
 '''
-{% endif %}
 
-{% if cookiecutter.use_isort == 'y' -%}
 [tool.isort]
 # https://github.com/timothycrosley/isort/
 py_version = {{ cookiecutter.minimal_python_version.replace('.', '') }}
@@ -98,7 +101,13 @@ profile = "black"
 multi_line_output = 3
 indent = 4
 color_output = true
-{% endif %}
+skip = [".cache", ".nox"]
+
+[tool.autoflake]
+check = true
+remove-unused-variables = true
+remove-all-unused-imports = true
+remove-duplicate-keys = true
 
 {% if cookiecutter.use_mypy == 'y' -%}
 [tool.mypy]
@@ -132,3 +141,22 @@ addopts = [
   "--doctest-continue-on-failure",
 ]
 {% endif %}
+
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = false
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = true
+ignore-nested-functions = false
+ignore-nested-classes = true
+ignore-setters = false
+fail-under = 100
+exclude = ["setup.py", "docs", "build", ".devcontainer", ".nox", ".cache"]
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+verbose = 0
+quiet = false
+color = true
+

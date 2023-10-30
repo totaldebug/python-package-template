@@ -16,23 +16,17 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: "{{ cookiecutter.minimal_python_version }}"
       - name: Run image
         uses: abatilo/actions-poetry@v2.0.0
       - name: Install dependencies with Poetry
         run: poetry install
-      {% if cookiecutter.use_isort == 'y' -%}
       - name: Check imports
         run: poetry run isort --diff
-      {% endif %}
-      {% if cookiecutter.use_black == 'y' -%}
       - name: Check Black formatting
         run: poetry run black --check
-      {% endif %}
-      {% if cookiecutter.use_flake8 == 'y' -%}
       - name: Check flake8 formatting
         run: poetry run flake8
-      {% endif %}
       {% if cookiecutter.use_mypy == 'y' -%}
       - name: Check static type
         run: poetry run mypy
@@ -67,7 +61,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: "{{ cookiecutter.minimal_python_version }}"
       - name: Install Poetry
         uses: snok/install-poetry@v1.1.1
       - name: Cache Poetry virtualenv

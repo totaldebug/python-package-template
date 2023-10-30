@@ -36,3 +36,10 @@ repos:
         entry: poetry run mypy pyarr
         types: [python]
         pass_filenames: false
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v1.2.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: []

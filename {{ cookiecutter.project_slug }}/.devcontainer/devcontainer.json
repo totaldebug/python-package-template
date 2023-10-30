@@ -1,0 +1,35 @@
+{
+    "name": "{{ cookiecutter.project_name }}",
+    "image": "totaldebug/debugbox:python",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.eol": "\n",
+                "editor.tabSize": 4,
+                "terminal.integrated.profiles.linux": {
+                    "zsh": {
+                        "path": "/bin/zsh"
+                    }
+                },
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "autoDocstring.docstringFormat": "google",
+                "[python]": {
+                    "diffEditor.ignoreTrimWhitespace": false,
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true
+                }
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-python.flake8",
+                "sourcery.sourcery",
+                "njpwerner.autodocstring",
+                "tabnine.tabnine-vscode",
+                "yzhang.markdown-all-in-one"
+            ]
+        }
+    },
+    "postCreateCommand": "zsh ./.devcontainer/post-install.sh"
+}
